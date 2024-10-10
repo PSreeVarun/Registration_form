@@ -1,0 +1,24 @@
+name: Registration Form Submission
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  process-registration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run registration script
+        run: |
+          # Here you can add your command to process the registration
+          # For example, running a Node.js script, a Python script, etc.
+          echo "Processing registration..."
+          # Add your script here, e.g. `node register.js`
